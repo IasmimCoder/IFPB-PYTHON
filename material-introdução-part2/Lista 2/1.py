@@ -29,4 +29,4 @@ print(number1 == number2)
 print("---------------------------------------------------")
 print(f"O número {number1} é diferente do número {number2}?")
 print(number1 != number2)
-
+print("---------------------------------------------------")

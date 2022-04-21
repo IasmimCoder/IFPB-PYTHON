@@ -7,26 +7,26 @@ number1 = int(input("Escolha um número: "))
 number2 = int(input("Escolha outro número: "))
 
 print("---------------------------------------------------")
-print(f"O número {number1} é maior que o número {number2}?")
+print(f"O valor da avaliação da expressão {number1} > {number2} é ")
 print(number1 > number2)
 
 print("---------------------------------------------------")
-print(f"O número {number1} é maior ou igual ao número {number2}?")
+print(f"O valor da avaliação da expressão {number1} >= {number2} é ")
 print(number1 >= number2)
 
 print("---------------------------------------------------")
-print(f"O número {number1} é menor que o número {number2}?")
+print(f"O valor da avaliação da expressão {number1} < {number2} é ")
 print(number1 < number2)
 
 print("---------------------------------------------------")
-print(f"O número {number1} é menor ou igual ao número {number2}?")
+print(f"O valor da avaliação da expressão {number1} <= {number2} é ")
 print(number1 <= number2)
 
 print("---------------------------------------------------")
-print(f"O número {number1} é igual ao número {number2}?")
+print(f"O valor da avaliação da expressão {number1} == {number2} é ")
 print(number1 == number2)
 
 print("---------------------------------------------------")
-print(f"O número {number1} é diferente do número {number2}?")
+print(f"O valor da avaliação da expressão {number1} != {number2} é ")
 print(number1 != number2)
 print("---------------------------------------------------")

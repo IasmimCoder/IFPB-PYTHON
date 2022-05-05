@@ -6,3 +6,15 @@ que o salário bruto do gerente é R$2300,00, do vendedor é R$2000,00 e do esto
 R$1700,00 são isentos. Perceba que a alíquota só incide sobre o valor que extrapola a
 faixa de isenção.
 '''
+funcionario = str(input("(GER) para gerente, (VEN) para vendedor e (EST) para estoquista: ")).lower()
+salario = 0
+
+if funcionario == "ger":
+    salario = 2300 - (2300*0.12)
+elif funcionario == "ven":
+    salario = 2000 - (2000*0.12)
+elif funcionario == "est":
+    salario = 1650
+
+print(f'O salário deste funcinário é de {salario}.')
+

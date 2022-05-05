@@ -24,11 +24,6 @@ alerta_leve = est_min + (est_min * 0.20)
 alerta_grave = est_min+ (est_min * 0.15)
 porcentagem_estoque = ((estoque_atual * 100)/est_min)-100
 
-'''
-print(f"Código\t|Produto\t\t|Estoque mínimo\t| Preço de compra p/ unidade | preço de venda p/ unidade")
-print(f"{cod_produto}|\t{nome}\t\t|{est_min}\t|")
-'''
-
 if estoque_atual > alerta_leve:
     print(f'Nova estocagem não é necessária.')
 elif (estoque_atual <= alerta_leve and estoque_atual >= alerta_grave) :

@@ -15,12 +15,12 @@ estoquista fará a consulta com frequência, então não precisa se preocupar co
 situação de uma consulta quando o estoque tiver abaixo de 15%.
 
 '''
-consulta = str(input("Deseja realizar uma consulta no estoque? ('yes' or 'no'): ")).lower()
+consulta = str(input("Deseja realizar uma consulta no estoque? ('yes' or 'no'): ")).lower().strip()[0]
 
-while consulta != "yes" and consulta != "no": 
-    consulta = str(input("Deseja realizar uma consulta? Digite apenas 'yes' or 'no': ")).lower()
+while consulta != "y" and consulta != "n": 
+    consulta = str(input("Deseja realizar uma consulta? Digite apenas 'yes' or 'no': ")).lower().strip()[0]
 
-while consulta == "yes": 
+while consulta == "y": 
 
     cod_produto = str(input("Informe o código do produto: "))
     estoque_atual = int(input("Informe o estoque desse produto: "))
@@ -58,10 +58,10 @@ while consulta == "yes":
 
     print(f'Seu estoque atual está {porcentagem_estoque:.1f}% acima do estoque mínimo desse produto.')
 
-    consulta = str(input("Deseja realizar mais uma consulta? ('yes' or 'no'): ")).lower()
+    consulta = str(input("Deseja realizar mais uma consulta? ('yes' or 'no'): ")).lower().strip()[0]
 
-    while consulta != "yes" and consulta != "no": 
-        consulta = str(input("Deseja realizar mais uma consulta? Digite apenas 'yes' or 'no': ")).lower()
-    if consulta == "no":
-        print("Bom trabalho!")
+    while consulta != "y" and consulta != "n": 
+        consulta = str(input("Deseja realizar mais uma consulta? Digite apenas 'yes' or 'no': ")).lower().strip()[0]
+
+print("Bom trabalho!")
     

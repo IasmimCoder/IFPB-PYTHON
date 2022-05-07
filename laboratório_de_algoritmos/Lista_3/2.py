@@ -20,16 +20,17 @@ cashback, o total da compra com cashback e, ainda, mostra quanto foi o faturamen
 venda, sabendo que o imposto (pago pela loja) é de 3,5% e considerando o cashback
 no cálculo.
 '''
-venda_novo_produto = str(input("Deseja registrar venda de produto? ('yes' or 'no'): ")).lower()
 total_da_venda = 0
 total_da_compra = 0
 preco_compra = 0
 preco_venda = 0
 
-while venda_novo_produto != "yes" and venda_novo_produto != "no":
-    venda_novo_produto = str(input("Deseja registrar venda de produto? Digite apenas 'yes' or 'no': ")).lower()
+venda_novo_produto = str(input("Deseja registrar venda de produto? ('yes' or 'no'): ")).lower().strip()[0]
 
-while venda_novo_produto == "yes":
+while venda_novo_produto != "y" and venda_novo_produto != "n":
+    venda_novo_produto = str(input("Deseja registrar venda de produto? Digite apenas 'yes' or 'no': ")).lower().strip()[0]
+
+while venda_novo_produto == "y":
 
     cod_produto = str(input("Informe o código do produto: "))
     quant_compra = int(input("Informe a quantidade que o cliente vai comprar: "))
@@ -51,19 +52,18 @@ while venda_novo_produto == "yes":
         preco_venda = 15
         preco_compra = 9.9
     
-    print(f'O total da venda agora é ${total_da_venda}')
+    print(f'O total da venda era ${total_da_venda}')
     total_da_venda = total_da_venda + (preco_venda * quant_compra)
-    print(f'+ novo produto, o total da venda é ${total_da_venda}')
+    print(f'+ novo produto, o total da venda agora é ${total_da_venda}')
     total_da_compra = total_da_compra + (preco_compra * quant_compra)
     
-    venda_novo_produto = str(input("Deseja registrar uma nova venda de produto? ('yes' or 'no'): ")).lower()
+    venda_novo_produto = str(input("Deseja registrar uma nova venda de produto? ('yes' or 'no'): ")).lower().strip()[0]
 
-    while venda_novo_produto != "yes" and venda_novo_produto != "no":
-        venda_novo_produto = str(input("Deseja registrar uma nova venda de produto? Digite apenas 'yes' or 'no': ")).lower()
+    while venda_novo_produto != "y" and venda_novo_produto != "n":
+        venda_novo_produto = str(input("Deseja registrar uma nova venda de produto? Digite apenas 'yes' or 'no': ")).lower().strip()[0]
         
 
-if venda_novo_produto == "no":
-    print(f"Ok! O total parcial da venda é de ${total_da_venda}")
+print(f"Ok! O total parcial da venda é de ${total_da_venda}")
 
 
 num_compras = int(input("Informe o número de compras já realizadas do cliente: "))
@@ -83,7 +83,7 @@ venda_final = total_da_venda - (total_da_venda * cashback)
 
 faturamento = (venda_final - total_da_compra) - 3.5/100
 
-print(f'O valor da venda foi de ${total_da_venda:.1f}')
+print(f'O valor da venda foi de ${total_da_venda:.2f}')
 print(f'O cashback é de {cashback*100}%')
-print(f"O preço final é {venda_final}")
-print(f'O faturamento, subtraido ao imposto pago e ao cashback, é de ${faturamento:.1f}')
+print(f"O preço final é ${venda_final}")
+print(f'O faturamento, subtraido ao imposto pago e ao cashback, é de ${faturamento:.2f}')

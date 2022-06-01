@@ -25,7 +25,7 @@ cliente o ganhou, agora esse valor é mesmo que dinheiro).
 
 #reaprovetei o código anterior para fazer as modificações solicitadas. Creio que assim fica mais completo.
 
-venda_novo_produto = str(input("Deseja registrar venda de produto? ('yes' or 'no'): ")).lower().strip[0]
+venda_novo_produto = str(input("Deseja registrar venda de produto? ('yes' or 'no'): ")).lower().strip()[0]
 
 total_da_venda = 0
 total_da_compra = 0
@@ -63,10 +63,10 @@ while venda_novo_produto == "y":
 
     total_da_compra = total_da_compra + (preco_compra * quant_compra)
     
-    venda_novo_produto = str(input("Deseja registrar uma nova venda de produto? ('yes' or 'no'): ")).lower().strip[0]
+    venda_novo_produto = str(input("Deseja registrar uma nova venda de produto? ('yes' or 'no'): ")).lower().strip()[0]
 
     while venda_novo_produto != "y" and venda_novo_produto != "n":
-        venda_novo_produto = str(input("Deseja registrar uma nova venda de produto? Digite apenas 'yes' or 'no': ")).lower().strip[0]
+        venda_novo_produto = str(input("Deseja registrar uma nova venda de produto? Digite apenas 'yes' or 'no': ")).lower().strip()[0]
         
 
 print(f"Ok! O total parcial da venda é de ${total_da_venda}")

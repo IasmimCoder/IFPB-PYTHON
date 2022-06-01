@@ -1,11 +1,14 @@
-n = int(input())
-w = input().split()
+def cashback_function(num_compras = 0):
+    if num_compras == 5:
+        cashback = 0.01
+    elif num_compras > 5 and num_compras <= 10:
+        cashback = 0.015
+    elif num_compras > 10:
+        cashback = 0.02
+    else:
+        print("Não receberá cashback: número de compras insuficiente.")
+    print(cashback)
 
-for ind, i in enumerate(w):
-    if(i[0:2]=='UR' and len(i)==3):
-        w[ind] = 'URI'
-    if(i[0:2]=='OB' and len(i)==3):
-        w[ind] = 'OBI'
-       
-i = ' '.join(w)
-print(i)
+num_compras = int(input())
+
+cashback_function(num_compras)

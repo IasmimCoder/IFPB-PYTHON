@@ -5,3 +5,5 @@ def fatorial(num):
     return num * fatorial(num - 1) 
 
 num = int(input())
+resultado = fatorial(num)
+print(resultado)

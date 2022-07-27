@@ -1,11 +1,10 @@
-lista_invertida = []
+'''Escreva uma função recursiva que recebe uma lista de números e retorna a lista invertida.
+Exemplo: para a lista [10, -1, 4] a função deve retornar [4, -1, 10]'''
 
-def inverte(lista):
-    if len(lista) > 0:
-        lista_invertida.append(lista.pop())
-        inverte(lista)
-    else:
-       print(lista_invertida)
+def inverter(lista):
+    if not lista: # lista vazia, retorna ela mesma
+        return lista
+    return lista[-1:] + inverter(lista[:-1])
 
-listaaa = [10, -1, 4]
-inverte(listaaa)
+lista = inverter([1, 2, 3, 4, 5])
+print(lista) # [5, 4, 3, 2, 1]
